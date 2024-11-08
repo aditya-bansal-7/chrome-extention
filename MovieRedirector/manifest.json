@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Open ZDisk Link",
+    "version": "1.1.1",
+    "description": "Automatically opens the generated link on zdisk.xyz in a new tab.",
+    "permissions": ["scripting", "tabs"],
+    "host_permissions": ["https://zdisk.xyz/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://zdisk.xyz/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  
